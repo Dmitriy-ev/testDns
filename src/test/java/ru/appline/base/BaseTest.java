@@ -12,8 +12,8 @@ public class BaseTest {
 
 	@BeforeClass
 	public static void before() {
-
-//		System.setProperty("webdriver.chrome.driver", "webdrivers/chromedriver.exe");
+		InitManager.initFramework();
+		
  	}
 	@Before
 	public void beforeEach() {
