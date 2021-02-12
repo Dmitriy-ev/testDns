@@ -9,17 +9,21 @@ import org.openqa.selenium.support.FindBy;
 
 public class ResulSearchPage extends BasePage{
 
+
 	/**
 	 * Найденные товары
 	 */
-	@FindBy(xpath = "//div[@class='items-group']")
+	@FindBy(xpath = "//div[@data-id='product']")
 	List<WebElement> selectProduct;
 
 	public ProductAndPriceInfomationPage selectProductTheList(String name) {
 		WebElement nameProduct;
 		for (WebElement webElement : selectProduct) {
-			nameProduct = webElement.findElement(By.xpath(".//div[@class='product-info__title-link']/a"));
-			if(nameProduct.getText().toLowerCase().contains(name)) {
+			nameProduct = webElement.findElement(By.xpath(".//a[@class='ui-link']"));
+			if(nameProduct.getText().contains(name)) {
+				scrollWithOffset(nameProduct, 0, -200);
+				elementToBeVisible(nameProduct);
+				elementToBeClickable(nameProduct);
 				nameProduct.click();
 			}
 			return app.getProductAndPriceInfomationPage();

@@ -11,13 +11,17 @@ public class DnsTest extends BaseTest {
 				
 		app.getStartPage().
 				  siteSearchProduct("playstation")
-				 .selectProductTheList("Игра The Legend")
+				 .selectProductTheList("Игровая консоль PlayStation 4 Slim Black")
 				 .selectWarranty("1")
 				 .clickToBuy()
 				 .productSearch("Detroit")
+				 .productPrice()
 				 .clickToBuy()
 				 .clickToCart()
-				 .deleteProductInCart("Detroit");
+				 .deleteProductInCart("Detroit")
+				 .addProduct("Игровая консоль PlayStation 4 Slim Black")
+				 .returnProduct();
+				 Thread.sleep(10000);
 
 	}
 }

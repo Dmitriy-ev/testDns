@@ -15,7 +15,23 @@ import java.util.concurrent.TimeUnit;
 
 public class BasePage {
 
-	 /**
+	
+	/**
+	 * навигация по сайту
+	 */
+	@FindBy(xpath = "//nav[@id='header-search']")
+	WebElement navigation;
+	/**
+	 * ссылка на корзину
+	 */
+	@FindBy(xpath = "//span[@class='cart-link__price']")
+	WebElement linkBasket;
+	
+	protected int priceNotWarranty;
+	protected int priceWithWarranty;
+	
+	
+	/**
      * Менеджер страничек
      */
     protected PageManager app = PageManager.getPageManager();
@@ -49,6 +65,9 @@ public class BasePage {
         PageFactory.initElements(getDriver(), this);
     }
 
+    protected void scrollApp() {
+		js.executeScript("window.scrollBy(0,-250)");
+	}
     /**
      * Функция позволяющая производить scroll до любого элемента с помощью js
      */

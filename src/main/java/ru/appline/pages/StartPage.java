@@ -1,15 +1,12 @@
 package ru.appline.pages;
 
-
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 
 public class StartPage extends BasePage{
 
-	@FindBy(xpath = "//input[contains(@placeholder,'Поиск по сайту')]")
-	WebElement siteSearch;
-
 	public ResulSearchPage siteSearchProduct(String name){
+		WebElement siteSearch = navigation.findElement(By.xpath(".//input[contains(@placeholder,'Поиск по сайту')]"));
 		elementToBeClickable(siteSearch);
 		siteSearch.click();
 		siteSearch.sendKeys(name + "\n");
