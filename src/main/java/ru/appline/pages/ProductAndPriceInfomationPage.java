@@ -23,7 +23,7 @@ public class ProductAndPriceInfomationPage extends BasePage{
 		priceNotWarranty = Integer.parseInt(productPrice.getText().trim().replaceAll("\\D", ""));
 		return priceNotWarranty;
 	}
-	
+
 	/**
 	 *выбор гарантии 
 	 */
@@ -45,7 +45,7 @@ public class ProductAndPriceInfomationPage extends BasePage{
 		elementToBeClickable(buttonBuy);
 		buttonBuy.click();
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

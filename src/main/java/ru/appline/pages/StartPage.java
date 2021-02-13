@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 
 public class StartPage extends BasePage{
 
-	
+
 	/**
 	 *поиск товара 
 	 */
@@ -16,5 +16,5 @@ public class StartPage extends BasePage{
 		siteSearch.sendKeys(name + "\n");
 		return app.getResulSearchPage();
 	}
-	
+
 }
