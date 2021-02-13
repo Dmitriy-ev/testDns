@@ -16,6 +16,10 @@ public class ResulSearchPage extends BasePage{
 	@FindBy(xpath = "//div[@data-id='product']")
 	List<WebElement> selectProduct;
 
+	
+	/**
+	 *выбор товара из найденных 
+	 */
 	public ProductAndPriceInfomationPage selectProductTheList(String name) {
 		WebElement nameProduct;
 		for (WebElement webElement : selectProduct) {

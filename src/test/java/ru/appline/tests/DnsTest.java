@@ -15,13 +15,13 @@ public class DnsTest extends BaseTest {
 				 .selectWarranty("1")
 				 .clickToBuy()
 				 .productSearch("Detroit")
-				 .productPrice()
 				 .clickToBuy()
 				 .clickToCart()
+				 .checkingPriceAndSum()
+				 .checkingWarranty("Игровая консоль PlayStation 4 Slim Black")
 				 .deleteProductInCart("Detroit")
 				 .addProduct("Игровая консоль PlayStation 4 Slim Black")
 				 .returnProduct();
-				 Thread.sleep(10000);
 
 	}
 }

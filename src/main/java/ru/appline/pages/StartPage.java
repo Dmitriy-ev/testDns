@@ -5,6 +5,10 @@ import org.openqa.selenium.WebElement;
 
 public class StartPage extends BasePage{
 
+	
+	/**
+	 *поиск товара 
+	 */
 	public ResulSearchPage siteSearchProduct(String name){
 		WebElement siteSearch = navigation.findElement(By.xpath(".//input[contains(@placeholder,'Поиск по сайту')]"));
 		elementToBeClickable(siteSearch);

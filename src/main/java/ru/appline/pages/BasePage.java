@@ -29,6 +29,7 @@ public class BasePage {
 	
 	protected int priceNotWarranty;
 	protected int priceWithWarranty;
+	protected int priceGame;
 	
 	
 	/**
